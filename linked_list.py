@@ -3,6 +3,7 @@ class Node():
         self.data = data
         self.next = None
 
+
 class LinkedList():
     def __init__(self):
         self.head = None
@@ -17,6 +18,7 @@ class LinkedList():
         
         return False
 
+    #traversing through linkedlist
     def print_list(self):
         current = self.head
 
@@ -24,6 +26,7 @@ class LinkedList():
             print(current.data)
             current = current.next
 
+    #O(1)
     def append(self,data):
 
         new_node = Node(data)
@@ -54,14 +57,36 @@ class LinkedList():
             else:
                 current = current.next  
 
+    
+    def remove_by_index(self,index):
+        if self.head is None:
+            return 
+        if index == 0:
+            self.head= self.head.next
 
-
+    def delete_dups(self):
+        nums = set()
+        current = self.head
+        previous = None
+        while current != None:
+            if current.data in nums:
+                previous.next = current.next
+            else:
+                nums.add(current.data)
+                previous = current
+            current = current.next
 
 fruitll = LinkedList()
 fruitll.append("apple")
 fruitll.append("berry")
-fruitll.append("cherry")
+fruitll.append("berry")
 fruitll.append("durian")
 fruitll.append("elderberry")
 fruitll.append("fig")
 
+numsll = LinkedList()
+numsll.append(2)
+numsll.append(2)
+numsll.append(3)
+numsll.append(3)
+numsll.append(5)
