@@ -42,14 +42,14 @@ s2.push(3)
 s2.push(4)
 s2.push(5)
 
+#use doublelinked list 
+class Queue():
+    def __init__:
+        self.queue=[]
 
-# class Queue():
-#     def __init__:
-#         self.queue=[]
+    def enqueue(number):
 
-#     def enqueue(number):
+    def dequeue
 
-#     def dequeue
-
-#     def peek
-#     def is_empty()
+    def peek
+    def is_empty()

@@ -76,9 +76,39 @@ class LinkedList():
                 previous = current
             current = current.next
 
+    def rearrange(self):
+        if self.head is None:
+            return 
+        fast = self.head
+        slow = self.head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        prev = None
+        current = slow
+        temp = 0
+        while current:
+            temp = current.next
+            current.next = prev
+            prev = current
+            current = temp
+    
+        n1= self.head
+        n2 = prev
+        print(n2.data)
+        while n2.next:
+            temp = n1.next
+            n1.next=n2
+            n1 = temp
+
+            temp = n2.next
+            n2.next = n1
+            n2 = temp
+        
+    
+
 fruitll = LinkedList()
 fruitll.append("apple")
-fruitll.append("berry")
 fruitll.append("berry")
 fruitll.append("durian")
 fruitll.append("elderberry")
@@ -90,3 +120,5 @@ numsll.append(2)
 numsll.append(3)
 numsll.append(3)
 numsll.append(5)
+
+
