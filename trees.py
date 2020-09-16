@@ -27,6 +27,7 @@ class Tree():
     def find_in_tree(self,data):
         return self.root.find(data)
 
+    
 A = Node("A")
 D = Node ("D")
 F = Node ("F")

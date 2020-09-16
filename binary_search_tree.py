@@ -1,5 +1,5 @@
 class BinarySearchNode():
-    def __int__(self, data, left=None, right=None):
+    def __init__(self, data=None, left=None, right=None):
         self.data = data
         self.left = left
         self.right = right 
@@ -25,5 +25,33 @@ class BinarySearchNode():
             right =root.right
         return max(self.maxDepth(left), self.maxDepth(right)) + 1 
     
-node_3 = BinarySearchNode(3,BinarySearchNode(9),node_20)
-node_20 = BinarySearchNode(,15,7)
+    def levelOrder(self,root):
+        levels = []
+
+        if root is None:
+            return levels
+
+        def helper(node,level):
+            if node:
+                if len(levels)==level:
+                    levels.append([])
+                levels[level].append(node.data)
+
+                helper(node.left,level+1)
+                helper(node.right,level+1)
+            
+        helper(root,0)
+
+        return levels
+    
+
+node_15 = BinarySearchNode(15)
+node_7 = BinarySearchNode(7)
+node_9 = BinarySearchNode(9)
+
+node_20 = BinarySearchNode(20)
+node_3 = BinarySearchNode(3)
+node_20.right= node_7
+node_20.left= node_15
+node_3.right = node_20
+node_3.left = node_9
