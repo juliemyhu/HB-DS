@@ -13,6 +13,7 @@ p.then((message) => {
     console.log('This is in the catch' + message)
 })
 
+// normal function
 
 function watchTutorialCallback(callback, errorCallback) {
   let userLeft = false
