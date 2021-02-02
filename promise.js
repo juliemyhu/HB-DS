@@ -1,3 +1,32 @@
+// promises help prevent callback hell.
+// it is an object that give back result, or failure of async operation 
+
+// resolve
+cons promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log("got the result");
+    resolve({user:"ed"});
+  },2000)
+})
+;
+
+promise.then(user => {
+  console.log(user);
+});
+
+// reject
+cons promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log("got the result");
+    reject((new Error("User not logged in")));
+  },2000)
+})
+;
+
+promise.then(user => {
+  console.log(user);
+}).catch(err => console.log(err.message));
+
 let p = new Promise((resolve,reject) => {
     let a = 1 + 1 
     if (a ==2) {
@@ -105,3 +134,10 @@ Promise.race([
 ]).then(message => {
   console.log(message)
 })
+
+// Async code
+
+setTimeout(() => {
+  console.log("We are in the timeout");
+}, 5000);
+
