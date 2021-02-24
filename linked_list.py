@@ -103,19 +103,19 @@ class LinkedList():
         
     
 
-fruitll = LinkedList()
-fruitll.append("apple")
-fruitll.append("berry")
-fruitll.append("durian")
-fruitll.append("elderberry")
-fruitll.append("fig")
+# fruitll = LinkedList()
+# fruitll.append("apple")
+# fruitll.append("berry")
+# fruitll.append("durian")
+# fruitll.append("elderberry")
+# fruitll.append("fig")
 
-numsll = LinkedList()
-numsll.append(2)
-numsll.append(2)
-numsll.append(3)
-numsll.append(3)
-numsll.append(5)
-numsll.append(3)
+# numsll = LinkedList()
+# numsll.append(2)
+# numsll.append(2)
+# numsll.append(3)
+# numsll.append(3)
+# numsll.append(5)
+# numsll.append(3)
 
 
